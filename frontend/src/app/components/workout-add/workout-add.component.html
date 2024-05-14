@@ -1,0 +1,50 @@
+<div class="container-fluid ">
+    <h3 class="mt-2" >Fitness Activity Form</h3>
+    <form action="" [formGroup]="fitnessForm" (ngSubmit)="onSubmit()">
+      {{fitnessForm.value | json}}  <!-- from view to model -->
+      <hr>
+      <!-- {{userModel | json}}   from model to view  -->
+  
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Activity: </label>
+        <input type="text" formControlName="activity" class="form-control" required >
+        <!-- <small *ngIf="activity.invalid && activity.touched" class="text-danger">Username required</small> -->
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Duration (minutes): </label>
+        <input type="number" formControlName="duration" class="form-control">
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Category: </label>
+        <select formControlName="category" class="form-control form-select">
+            <option value="Strength">Strength</option>
+            <option value="Cardio">Cardio</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Type: </label>
+        <select formControlName="type" class="form-control form-select" multiple>
+            <option value="strength">Strength</option>
+            <option value="cardio">Cardio</option>
+            <option value="yoga">Yoga</option>
+            <option value="pilates">Pilates</option>
+            <option value="others">Others</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Intensity: </label>
+        <select formControlName="intensity" class="form-control form-select">
+            <option value="1">High</option>
+            <option value="0.5">Medium</option>
+            <option value="0">Low</option>
+        </select>
+      </div>
+   
+      <button class="btn btn-primary" type="submit">Save</button>
+  
+    </form>
+</div>

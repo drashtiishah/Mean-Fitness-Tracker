@@ -1,0 +1,19 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a routerLink="./" class="navbar-brand">Fitness Tracker</a>
+          <div class="d-flex">
+            @if(isUserLoggedIn){
+                <!-- <a routerLink="/" class="btn btn-sm btn-primary mx-2">Home</a>                 -->
+                <a routerLink="/workout-list" class="btn btn-sm btn-primary mx-2" (click)="displayData()">Display Workout</a>                
+                <a routerLink="/workout-add" class="btn btn-sm btn-primary mx-2" (click)="newData($event)">Add Workout</a>                
+                <a (click)="logout()" class="btn btn-sm btn-primary">Logout</a>    
+            }
+            @else{  
+                <a routerLink="/login" class="btn btn-sm btn-outline-primary mx-2">Login</a>
+                <a routerLink="/register" class="btn btn-sm btn-primary">Register</a>
+            }
+            </div>
+        </div>
+      </nav>
+</header>
