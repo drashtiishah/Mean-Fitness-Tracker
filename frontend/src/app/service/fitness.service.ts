@@ -13,7 +13,7 @@ export class FitnessService {
   constructor(private _http: HttpClient, private router: Router) { }
 
   public workoutDetails?: WorkoutDetails;
-  public baseUri: string = 'http://localhost:8000/api';
+  public baseUri: string = 'https://mean-fitness-tracker-backend.vercel.app/api';
   public headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   //Create

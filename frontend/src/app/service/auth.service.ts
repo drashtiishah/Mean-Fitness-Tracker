@@ -15,7 +15,7 @@ export class AuthService {
     this.isUserLoggedIn = token ? true : false;
    }
 
-  private apiUrl = "http://localhost:8000/api/auth";
+  private apiUrl = "https://mean-fitness-tracker-backend.vercel.app/api/auth";
 
   private httpOptions = {
     headers: new HttpHeaders({
