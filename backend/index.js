@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const routes = require('../backend/routes/fitness');
+const routes = require('./routes/fitness');
 
 const app = express();
 // Create PORT
@@ -27,6 +27,9 @@ app.use(express.urlencoded({ extended: false}));
 app.use(cookieParser());
 
 //Routes
+app.get('/', (req,res) => {
+  res.send("HELLO WORLD")
+});
 app.use('/api', routes);
 
 app.listen(PORT, () => {
