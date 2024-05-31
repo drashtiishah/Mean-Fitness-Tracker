@@ -18,7 +18,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/Fitness-Tracker')
 
 //Middleware - Plugin
 app.use(cors({
-  origin: "http://localhost:4200",
+  origin: process.env.CORS_ORIGIN,
   credentials: true,
 }));
 app.use(express.json());
