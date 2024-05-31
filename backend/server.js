@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -10,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 
 
 //Connection to Database
-mongoose.connect('mongodb://127.0.0.1:27017/Fitness-Tracker')
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected!"))
     .catch((err) => {
         console.log("Could not connect to database : " + err);
