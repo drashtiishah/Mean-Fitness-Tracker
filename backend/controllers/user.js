@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user.js");
 
 const cookieOptions = {
-    domain: "localhost",
+    domain: "https://mean-fitness-tracker-frontend.vercel.app/",
     maxAge: 24 * 60 * 60 * 1000,
     // httpOnly: true,
     sameSite: "none",
